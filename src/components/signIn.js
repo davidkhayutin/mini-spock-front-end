@@ -31,10 +31,10 @@ export default class SignInSide extends React.Component{
 
   render(){
     return (
-      <div>
-        <input type="text" name="username" hint="username" onChange={this.updateUserName} className="username" />
-        <input type="password" name="password" hint="password" onChange={this.updatePassword}  className="password" />
-        <button  name="submit" onClick={this.signIn} className="loginButton"> Submit</button>
+      <div style={{textAlign:"center", paddingTop:"10vh", }}>
+        <input style={{height:"7vh", width:"10vw"}}type="text" name="username" hint="username" onChange={this.updateUserName} className="username" />
+        <input style={{height:"7vh", width:"10vw"}} type="password" name="password" hint="password" onChange={this.updatePassword}  className="password" />
+        <button  style={{height:"8vh", width:"10vw"}} name="submit" onClick={this.signIn} className="loginButton"> Submit</button>
       </div>
     );
 

@@ -13,7 +13,7 @@ class App extends React.Component {
 
   render(){
     return (
-      <div className="App-header" style={{  backgroundColor: "#282c34",
+      <div className="App-header" style={{ height:"100vh",backgroundColor: "#282c34",
         fontSize: "calc(10px + 2vmin)",
         color: "white"}}>
         {this.state.validUser?
