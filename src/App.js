@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import SignInSide from './components/signIn'
+import MainPage from './components/mainStore'
+class App extends React.Component {
+  state={
+    user:"",
+    validUser:false,
+  }
+  updateUser = (user) => {
+    this.setState({ user, validUser:true})
+  }
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  render(){
+    return (
+      <div className="App-header" style={{  backgroundColor: "#282c34",
+        fontSize: "calc(10px + 2vmin)",
+        color: "white"}}>
+        {this.state.validUser?
+            <MainPage />
+            :
+            <SignInSide updateUser={this.updateUser}/>
+          }
+      </div>
+    );
+  }
 }
 
 export default App;
